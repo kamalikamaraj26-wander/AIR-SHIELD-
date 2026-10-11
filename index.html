@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b1728">
+  <title>AIR-SHIELD | Air Safety Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="AirShield home"><span class="brand-mark">✦</span><span>AIR<span class="accent">SHIELD</span><small>COMMUNITY AIR SAFETY</small></span></a>
+    <div class="header-right"><span class="live-dot"></span><span>DEMO MODE</span><button id="refreshBtn" class="refresh-btn">↻ Refresh demo</button></div>
+  </header>
+
+  <main class="container">
+    <section class="welcome">
+      <div><p class="eyebrow">AIR QUALITY · SAFETY · AWARENESS</p><h1>Breathe easier.<br><span>Stay informed.</span></h1>
+      <p class="intro">A simple community dashboard to understand air conditions, spot risk levels, and make safer everyday choices.</p></div>
+      <div class="hero-orb" aria-hidden="true"><div class="orb-inner">AIR<br><b>+</b><br>CARE</div><span class="orb-ring ring-one"></span><span class="orb-ring ring-two"></span></div>
+    </section>
+
+    <section class="section-head"><div><p class="eyebrow">YOUR DASHBOARD</p><h2>Today's air snapshot</h2></div><span id="updatedAt" class="muted">Demo values · not live sensor data</span></section>
+
+    <section class="metrics">
+      <article class="metric-card primary"><div class="metric-top"><span>Air Quality Index</span><span class="metric-icon">◉</span></div><div class="metric-value"><strong id="aqi">58</strong><span>/ 500</span></div><div id="aqiStatus" class="status-pill">Moderate</div><div class="meter"><span id="aqiMeter" style="width:11.6%"></span></div><p class="metric-note">Illustrative demo reading</p></article>
+      <article class="metric-card"><div class="metric-top"><span>PM2.5</span><span class="metric-icon">◌</span></div><div class="metric-value"><strong id="pm">18</strong><span>µg/m³</span></div><p class="metric-note">Fine particles · demo value</p><div class="mini-line">〰〰〰〰〰〰</div></article>
+      <article class="metric-card"><div class="metric-top"><span>Temperature</span><span class="metric-icon">♧</span></div><div class="metric-value"><strong id="temp">29</strong><span>°C</span></div><p class="metric-note">Illustrative local condition</p><div class="mini-line">〰〰〰〰〰〰</div></article>
+      <article class="metric-card"><div class="metric-top"><span>Humidity</span><span class="metric-icon">◒</span></div><div class="metric-value"><strong id="humidity">64</strong><span>%</span></div><p class="metric-note">Illustrative local condition</p><div class="mini-line">〰〰〰〰〰〰</div></article>
+    </section>
+
+    <section class="content-grid">
+      <article class="panel advice-panel"><div class="panel-heading"><div><p class="eyebrow">PERSONAL GUIDANCE</p><h2 id="adviceTitle">A few mindful steps</h2></div><span class="shield">✓</span></div>
+        <p id="adviceText">Air quality is shown as moderate in this demo. Consider reducing prolonged, intense outdoor activity if you are sensitive to air pollution.</p>
+        <ul id="adviceList"><li>Check local official air-quality updates before outdoor exercise.</li><li>Keep windows closed during nearby smoke or dust events.</li><li>Follow advice from qualified health and public-safety authorities.</li></ul>
+        <p class="disclaimer">This educational prototype does not provide medical advice or verified emergency alerts.</p>
+      </article>
+      <article class="panel alerts-panel"><div class="panel-heading"><div><p class="eyebrow">ACTIVITY FEED</p><h2>Safety notices</h2></div><span class="count">03</span></div>
+        <div class="alert-item"><span class="alert-symbol blue">i</span><div><b>Demo dashboard is active</b><p>Values are simulated for demonstration only.</p><time>Just now</time></div></div>
+        <div class="alert-item"><span class="alert-symbol amber">!</span><div><b>Verify before acting</b><p>Use official sources for real-time local conditions.</p><time>Safety reminder</time></div></div>
+        <div class="alert-item"><span class="alert-symbol green">✓</span><div><b>Community readiness</b><p>Share verified guidance, not unconfirmed reports.</p><time>Preparedness tip</time></div></div>
+      </article>
+    </section>
+
+    <section class="panel how-panel"><div><p class="eyebrow">BUILT FOR THE CLOUD</p><h2>From a dashboard to a cloud service</h2><p>This prototype is a front-end demonstration. It can be hosted on Amazon S3 with CloudFront. A future version can connect verified sensor feeds through Amazon API Gateway and AWS Lambda.</p></div><div class="cloud-steps"><span>Website</span><b>→</b><span>CloudFront</span><b>→</b><span>S3</span></div></section>
+    <footer><span>© AIR-SHIELD · Student project prototype</span><span>Transparent data · Safer decisions</span></footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
